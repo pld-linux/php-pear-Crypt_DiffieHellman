@@ -4,7 +4,7 @@
 %define		_status		beta
 %define		_pearname	Crypt_DiffieHellman
 Summary:	%{_pearname} - Implementation of Diffie-Hellman Key Exchange cryptographic protocol for PHP5
-Summary(pl.UTF-8):	%{_pearname} - implementacja protko≥u uzgadniania kluczy Diffiego-Hellmana dla PHP5
+Summary(pl.UTF-8):	%{_pearname} - implementacja protko≈Çu uzgadniania kluczy Diffiego-Hellmana dla PHP5
 Name:		php-pear-%{_pearname}
 Version:	0.2.0
 Release:	1
@@ -29,9 +29,9 @@ channel of communication.
 In PEAR status of this package is: %{_status}.
 
 %description -l pl.UTF-8
-Implementacja protoko≥u uzgadniania kluczy Diffiego-Hellmana dla PHP5.
-Umoøliwia dwÛm stronom ustalenie w bezpieczny sposÛb klucza transmisji
-poprzez niezabezpieczony kana≥ transmisji.
+Implementacja protoko≈Çu uzgadniania kluczy Diffiego-Hellmana dla PHP5.
+Umo≈ºliwia dw√≥m stronom ustalenie w bezpieczny spos√≥b klucza transmisji
+poprzez niezabezpieczony kana≈Ç transmisji.
 
 Ta klasa ma w PEAR status: %{_status}.
 
