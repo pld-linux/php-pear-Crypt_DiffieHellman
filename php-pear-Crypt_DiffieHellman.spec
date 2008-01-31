@@ -7,7 +7,7 @@ Summary:	%{_pearname} - Implementation of Diffie-Hellman Key Exchange cryptograp
 Summary(pl.UTF-8):	%{_pearname} - implementacja protkołu uzgadniania kluczy Diffiego-Hellmana dla PHP5
 Name:		php-pear-%{_pearname}
 Version:	0.2.0
-Release:	1
+Release:	2
 License:	New BSD License
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
