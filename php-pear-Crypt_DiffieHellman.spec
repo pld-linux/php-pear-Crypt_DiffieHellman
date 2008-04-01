@@ -4,7 +4,7 @@
 %define		_status		beta
 %define		_pearname	Crypt_DiffieHellman
 Summary:	%{_pearname} - Implementation of Diffie-Hellman Key Exchange cryptographic protocol for PHP5
-Summary(pl.UTF-8):	%{_pearname} - implementacja protkołu uzgadniania kluczy Diffiego-Hellmana dla PHP5
+Summary(pl.UTF-8):	%{_pearname} - implementacja protokołu uzgadniania kluczy Diffiego-Hellmana dla PHP5
 Name:		php-pear-%{_pearname}
 Version:	0.2.0
 Release:	2
