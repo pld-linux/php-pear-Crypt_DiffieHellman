@@ -6,12 +6,12 @@
 Summary:	%{_pearname} - Implementation of Diffie-Hellman Key Exchange cryptographic protocol for PHP5
 Summary(pl.UTF-8):	%{_pearname} - implementacja protokołu uzgadniania kluczy Diffiego-Hellmana dla PHP5
 Name:		php-pear-%{_pearname}
-Version:	0.2.0
-Release:	3
+Version:	0.2.5
+Release:	1
 License:	New BSD License
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	4abdc73b379bdfb3f4b172a30c67335d
+# Source0-md5:	60ba8aa7916afdc9ab3b9cb0bea4a1da
 URL:		http://pear.php.net/package/Crypt_DiffieHellman/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -39,9 +39,9 @@ Ta klasa ma w PEAR status: %{_status}.
 Summary:	Tests for PEAR::%{_pearname}
 Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
-AutoReq:	no
 Requires:	%{name} = %{version}-%{release}
 AutoProv:	no
+AutoReq:	no
 
 %description tests
 Tests for PEAR::%{_pearname}.
@@ -56,17 +56,20 @@ Testy dla PEAR::%{_pearname}.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}/Crypt
 %pear_package_install
-mv -f $RPM_BUILD_ROOT%{php_pear_dir}/{,Crypt}/DiffieHellman
-mv -f $RPM_BUILD_ROOT%{php_pear_dir}/{,Crypt}/DiffieHellman.php
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post
+if [ -f %{_docdir}/%{name}-%{version}/optional-packages.txt ]; then
+	cat %{_docdir}/%{name}-%{version}/optional-packages.txt
+fi
+
 %files
 %defattr(644,root,root,755)
-%doc install.log
+%doc install.log optional-packages.txt
 %{php_pear_dir}/.registry/*.reg
-%{php_pear_dir}/Crypt/DiffieHellman/
+%{php_pear_dir}/Crypt/DiffieHellman
 %{php_pear_dir}/Crypt/DiffieHellman.php
 
 %files tests
